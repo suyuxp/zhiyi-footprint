@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -42,7 +41,11 @@ gem "rubycas-client"
 gem "cancan"
 gem "settingslogic"
 gem "cells"
-group :test do
+
+gem "mongoid"
+gem "bson_ext"
+
+group :test, :development do
   gem "turn", :require => false
   gem "rspec-rails"
   gem "spork"
@@ -54,5 +57,6 @@ group :test do
   gem "guard-rspec"
   gem "guard-livereload"
   gem "guard-bundler"
+  gem 'rb-fsevent', '~> 0.9'
   gem "simplecov", :require => false
 end
