@@ -44,6 +44,8 @@ gem "cells"
 
 gem "mongoid"
 gem "bson_ext"
+gem "amqp"
+gem "thin"
 
 group :test, :development do
   gem "turn", :require => false

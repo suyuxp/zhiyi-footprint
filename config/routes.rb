@@ -1,6 +1,8 @@
 ZhiyiFootprint::Application.routes.draw do
   match '/logout' => 'application#logout'
 
+  resources :welcome
+
   root :to => 'home#index'
 
   # The priority is based upon order of creation:

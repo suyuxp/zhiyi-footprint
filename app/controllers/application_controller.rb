@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter CASClient::Frameworks::Rails::Filter
+  # before_filter CASClient::Frameworks::Rails::Filter
 
   def current_user
     user ||= Unirole::User.where(login: session[:login]).first if session[:login]

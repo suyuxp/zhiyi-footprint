@@ -23,7 +23,7 @@ describe Guest do
     expect { Guest.create!(@example) }.to raise_error
   end
 
-  it "应用名过短或者不是字母、数字加下划线是不合法的" do
+  it "应用名格式不符的都是不合法的" do
     @invalids.each do |guest|
       expect { Guest.create!(guest) }.to raise_error
     end
